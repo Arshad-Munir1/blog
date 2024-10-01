@@ -13,13 +13,12 @@ The best part? Thanks to my understanding of for loops, I’ve been able to crea
 Here’s a little snippet of the code I’ve been working on:
 
 
-{% highlight ruby %}
+{% highlight python %}
 def draw_spirograph(size_of_gap):
     for _ in range(int(360 / size_of_gap)):
         tim.color(random_color())
         tim.circle(100)
         tim.setheading(tim.heading() + size_of_gap)
+{% endhighlight %}
 
-![Output: ](/assets/spirograph.jpg )
-
-
+![Output: ](/assets/spirograph.jpg)
