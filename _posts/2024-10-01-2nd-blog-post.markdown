@@ -24,5 +24,5 @@ def draw_spirograph(size_of_gap):
 See below link to the full code on GitHub
 [My GitHub Repository](https://github.com/Arshad-Munir1/spirograph)
 
-See below the output:
+This is the output:
 ![Output: ]({{ site.url }}{{ site.baseurl }}/assets/Images/spirograph.jpg)
