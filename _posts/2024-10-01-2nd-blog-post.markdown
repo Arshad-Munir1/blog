@@ -21,4 +21,8 @@ def draw_spirograph(size_of_gap):
         tim.setheading(tim.heading() + size_of_gap)
 {% endhighlight %}
 
+See below link to the full code on GitHub
+[My GitHub Repository](https://github.com/Arshad-Munir1/spirograph)
+
+See below the output:
 ![Output: ]({{ site.url }}{{ site.baseurl }}/assets/Images/spirograph.jpg)
