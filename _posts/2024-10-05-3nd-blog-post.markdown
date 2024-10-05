@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "3rd blog post: My Art Dot Paiting"
+title:  "3rd blog post: My Art Dot Painting"
 date:   2024-10-05
 categories: jekyll update
 ---
