@@ -24,7 +24,7 @@ for dot_count in range(1, number_of_dots + 1):
         timmy.setheading(0)
 {% endhighlight %}
 
-I commented out the code that I used for extracting the colours using the colorgram library, as once i had the colours in tuples, i din't need to run the code again.
+I commented out the code that I used for extracting the colours using the colorgram library, as once i had the colours in tuples, i didn't need to run the code again.
 
 See below link to the full code on GitHub
 [My GitHub Repository](https://github.com/Arshad-Munir1/Art-dot-painting)
