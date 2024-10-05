@@ -4,19 +4,11 @@ title:  "3nd blog post: My Art Dot Paiting"
 date:   2024-10-05
 categories: jekyll update
 ---
-Over the last week i've been using the turtle module to produce images.
-I've been looking at some of Damien Hirst's art and wanted to prodcue a dot image that he is famous for.
-Some of his paintings had sold for £1.5M!!!
+This past week, I've been diving into Python’s turtle module to create some eye-catching art! Inspired by the legendary Damien Hirst, whose dot paintings have sold for as much as £1.5 million, I wanted to try my hand at producing my own dot masterpiece.
 
-So again, using the turtle module, i've created a dot image.
+To get started, I needed to extract colors from one of Hirst's famous dot images. For this, I turned to the colorgram Python library, which helped me pull out the perfect color palette. I have to admit, transforming that data into something usable—a neat list of tuples—was the trickiest part! But once I cracked that, it was smooth sailing, as I randomized the colors to form my own unique dot image.
 
-The first part of this challenge was to lift colours from a dot image. I used the colorgram Python Library
-to help me with this.
-I would say, using the above library and then getting the output into a usable form (i.e. a list of tuples),
-was the most challenging part of this task.
-Once you have a list of colours it was quite straight forward to randomise the colours to make a dot image.
-
-Here’s a little snippet of the code I’ve been working on:
+Here’s a quick peek at the code I’ve been playing with:
 
 
 {% highlight python %}
