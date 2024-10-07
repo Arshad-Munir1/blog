@@ -27,4 +27,4 @@ See below link to the full code on GitHub
 [My GitHub Repository](https://github.com/Arshad-Munir1/turtle_race)
 
 This is the output:
-![Output: ]({{ site.url }}{{ site.baseurl }}/assets/videos/turtle_race.mp4)
+![Output: ]({{ site.url }}{{ site.baseurl }}/assets/Videos/turtle_race.mp4)
