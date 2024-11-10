@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "10th blog post: Rading CSV files"
+date:   2024-11-10
+categories: jekyll update
+---
+Learning to dive into data starts with the basics, and the first step is opening a CSV file. It’s not hard, but it can take a few lines of code to get what you need.
+
+{% highlight python %}
+
+import csv
+
+with open("weather_data.csv") as data_file:
+    data = csv.reader(data_file)
+    temperature = []
+    for row in data:
+        if row[1] != "temp":
+            temperature.append(int(row[1]))
+    print(temperature)
+
+{% endhighlight %}
+
+The above code takes a simple weather data table and pulls out temperature values into a list. Straightforward, but could it be simpler? With the pandas library, you can cut this down to just three lines—and the output is much easier to read:
+
+{% highlight python %}
+
+import pandas
+
+data = pandas.read_csv("weather_data.csv")
+print(data)
+
+{% endhighlight %}
+
+Is pandas the king of data handling? I’ve only just scratched the surface, but right now, it feels like a game-changer!
+
+See below link to the full code on GitHub
+[My GitHub Repository](https://github.com/Arshad-Munir1/basic_weather)
+[My GitHub Repository](https://github.com/Arshad-Munir1/pandas_weather)
