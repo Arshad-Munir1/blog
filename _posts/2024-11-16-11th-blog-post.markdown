@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "11th blog post: Guessing the states game"
+date:   2024-11-16
+categories: jekyll update
+---
+🚀 New Project Alert! 🌟
+
+I’ve been diving deeper into the Pandas library with an exciting new project—a game that tests your knowledge of U.S. states! 🗺️
+
+Here’s how it works:
+✅ Guess a state.
+✅ If correct, it’s marked on a U.S. map (a .gif file) using coordinates from a CSV file.
+✅ All your guesses are tracked.
+✅ When you’re done, a CSV file is created, listing the states you missed—perfect for brushing up on geography!
+
+This project has been a fantastic way to explore Pandas further. It’s helped streamline my code significantly and opened the door to tackling more complex challenges.
+
+Pandas just keeps impressing me with its versatility and power! 💻
+
+Would love to hear your thoughts or suggestions on similar projects! 😊
+
+Check out a snippet of the code below:
+
+{% highlight python %}
+
+data = pandas.read_csv("50_states.csv")
+all_states = data.state.to_list()
+
+state_guess = []
+while len(state_guess) < 50:
+    answer_state = screen.textinput(title=f"{len(state_guess)} /50 States correct", prompt="Whats another states name?").title()
+
+    if answer_state == "Exit":
+        missing_states = []
+        for state in all_states:
+            if state not in state_guess:
+                missing_states.append(state)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn")
+        break
+    if answer_state in all_states:
+        state_guess.append(answer_state)
+        t = turtle.Turtle()
+        t.hideturtle()
+        t.penup()
+        state_data = data[data.state == answer_state]
+        t.goto(state_data.x.item(), state_data.y.item())
+        t.write(answer_state)
+
+{% endhighlight %}
+
+See below link to the full code on GitHub
+[My GitHub Repository](https://github.com/Arshad-Munir1/us_state_game)
