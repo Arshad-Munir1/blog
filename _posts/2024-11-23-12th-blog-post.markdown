@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "12th blog post: Continuing with pandas - phonetic app"
+date:   2024-11-23
+categories: jekyll update
+---
+📌 Project Spotlight: Phonetic Alphabet Converter
+
+I recently worked on a simple yet interesting project that demonstrates the power of dictionary comprehension in Python. The idea is straightforward:
+
+✅ Input: A word entered by the user
+✅ Output: A list of words representing the phonetic alphabet for each letter in the input
+
+Here’s a quick breakdown of how it works:
+1️⃣ I start by reading a CSV file using pandas to load the data.
+2️⃣ Using a loop, I transform the data into a dictionary, where each letter (key) is mapped to its corresponding phonetic word (value).
+3️⃣ Finally, I use list comprehension to iterate through each letter in the user’s input and retrieve its phonetic equivalent from the dictionary.
+
+The result? A clean and efficient solution for converting text to its phonetic alphabet representation.
+
+Here’s the complete code: 👇
+
+This project reinforced how small concepts like list and dictionary comprehension can simplify workflows and make Python projects more efficient. Excited to tackle the next one! 🚀
+
+#PythonProjects #CodingJourney #DataScience #LearnPython #CodeNewbie #ProgrammingTips #PhoneticAlphabet #100DaysOfCode #Pandas #DictionaryComprehension
+
+{% highlight python %}
+import pandas
+
+data = pandas.read_csv("nato_phonetic_alphabet.csv")
+
+phonetic_dict = {row.letter: row.code for (index, row) in data.iterrows()}
+
+word = input("Select Word: ").upper()
+
+output_list = [phonetic_dict[letter] for letter in word]
+
+print(output_list)
+{% endhighlight %}
+
+See below link to the full code on GitHub
+[My GitHub Repository](https://github.com/Arshad-Munir1/phonetic_alphabet)
