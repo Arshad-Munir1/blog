@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "13th blog post: Starting with tkinter"
+date:   2025-01-25
+categories: jekyll update
+---
+🎉 Back in Action with My Latest Project! 🎉
+
+It’s been a little while since my last project (thanks to Christmas and New Year’s festivities), but I’m thrilled to share what I’ve been working on as I ease back into the groove!
+
+This time, I’ve taken a leap into creating my first-ever GUI using Tkinter. 🖥️✨
+
+Introducing… 🏃‍♂️ A Miles to Kilometers Converter! 🚴‍♀️
+
+It may be a small step, but it’s a significant milestone for me. The GUI features buttons and input fields, and I couldn’t be more excited to explore the possibilities this opens up.
+
+Check a snippit of the code below but also the link on GitHubit! 🙌
+
+{% highlight python %}
+def miles_to_km():
+    miles = float(miles_input.get())
+    km = miles * 1.689
+    kilometer_result_label.config(text=f"{km}")
+
+window = Tk()
+window.title("Miles to km Converter")
+window.config(padx=20, pady=20)
+
+miles_input = Entry(width=7)
+miles_input.grid(column=1, row=0)
+
+{% endhighlight %}
+
+See below link to the full code on GitHub
+[My GitHub Repository](https://github.com/Arshad-Munir1/mile_to_km-converter)
