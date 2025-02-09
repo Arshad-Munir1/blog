@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "14th blog post: Password generator GUI using Tkinter"
+date:   2025-02-09
+categories: jekyll update
+---
+🚀 My Most Useful Python Project Yet – A Password Generator with a GUI! 🔑💻
+
+This project has been an exciting evolution of my Tkinter skills, and I built it to solve a real problem—quickly generating and storing secure passwords instead of scrambling to find them later!
+
+🔹 What It Does:
+✅ Generates random, secure passwords
+✅ Saves them locally for easy access
+✅ User-friendly GUI for seamless experience
+
+🛠️ How I Built It:
+🔹 Designed the UI with Tkinter
+🔹 Used list comprehensions for efficiency
+🔹 Read through loads of Tkinter documentation to refine layout, cursor placement, and entry handling
+🔹 Brought together different elements from previous projects into a fully functional, everyday tool
+
+I'm already using it, and it’s making my life easier! Since everything is stored locally, security is in my hands.
+
+💡 Want to try it? Check out the code on my GitHub and build your own password manager! 🔗
+
+#Python #Coding #Tkinter #Automation #100DaysOfCode #DevTools
+
+{% highlight python %}
+def save():
+
+    website = website_entry.get()
+    email = email_entry.get()
+    password = password_entry.get()
+
+    if len(website) == 0 or len(password) == 0:
+        messagebox.showinfo(title="ops", message="Please do not leave blank fields")
+    else:
+
+        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email} " f"\nPassword: {password} \nIs it ok to save?")
+
+        if is_ok:
+            with open("data.txt", "a") as data_file:
+                data_file.write(f"{website} | {email} | {password}\n")
+                website_entry.delete(0, END)
+                password_entry.delete(0, END)
+                website_entry.focus()
+
+{% endhighlight %}
+
+See below link to the full code on GitHub
+[My GitHub Repository](https://github.com/Arshad-Munir1/password-manager-start)
