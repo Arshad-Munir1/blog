@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "15th blog post: Password generator GUI using Tkinter Upgrade!"
+date:   2025-02-07
+categories: jekyll update
+---
+🚀 Leveling Up My Password Generator! 🔑✨
+
+Still going strong with my coding journey! My latest project is an exciting update to my Tkinter-based Password Generator—now with search functionality! 🔍💡
+
+Instead of manually scrolling through saved passwords, you can now search for a website and instantly retrieve the stored password (makes sense, right?). To make this happen, I ditched the old .txt format and upgraded to JSON—a widely used format that plays nicely with key-value searches. 📂⚡
+
+This update came with some real challenges:
+✅ Handling read/write modes in different scenarios
+✅ Catching exceptions (like when there’s no saved data yet)
+✅ Structuring and searching JSON data efficiently
+
+It pushed my problem-solving skills, but I’m super happy with the result! 😃💪
+
+Would love to hear your thoughts—what’s your go-to method for storing and managing data in small projects? Drop a comment! 👇
+
+#Python #Tkinter #CodingJourney #ProblemSolving #JSON
+
+{% highlight python %}
+
+def save():
+
+    website = website_entry.get()
+    email = email_entry.get()
+    password = password_entry.get()
+    new_data = {
+        website: {
+            "email": email,
+            "password": password,
+        }
+    }
+
+    if len(website) == 0 or len(password) == 0:
+        messagebox.showinfo(title="ops", message="Please do not leave blank fields")
+    else:
+        try:
+            with open("data.json", "r") as data_file:
+                #Reading old data
+                data = json.load(data_file)
+        except FileNotFoundError:
+            with open("data.json", "w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+
+        else:
+            #Updaing old data with new data
+            data.update(new_data)
+
+            with open("data.json", "w") as data_file:
+                #Saving updated data
+                json.dump(data, data_file, indent=4)
+
+        finally:
+            website_entry.delete(0, END)
+            password_entry.delete(0, END)
+            website_entry.focus()
+
+{% endhighlight %}
+
+See below link to the full code on GitHub
+[My GitHub Repository](https://github.com/Arshad-Munir1/password-manager-startv2)
